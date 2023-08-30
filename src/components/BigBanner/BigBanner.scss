@@ -5,6 +5,7 @@
 
 .app__container {
   display: flex;
+  align-items: center;
   justify-content: space-between;
 
   background-color: $orange_100;
@@ -33,6 +34,10 @@
     line-height: 56px;
 
     margin: 12px 0 22px 0;
+
+    @media (max-width: 560px) {
+      font-size: 38px;
+    }
   }
 
   .text {
@@ -41,11 +46,29 @@
     line-height: 32px;
 
     margin-bottom: 22px;
+
+    @media (max-width: 560px) {
+      font-size: 20px;
+    }
+  }
+
+  @media (max-width: 560px) {
+    padding: 40px 0 40px 22px;
   }
 }
 
 .image__wrapper {
   position: relative;
+
+  img {
+    @media (max-width: 1000px) {
+      width: 400px;
+    }
+  }
+
+  @media (max-width: 860px) {
+    display: none;
+  }
 }
 
 .price-widget {

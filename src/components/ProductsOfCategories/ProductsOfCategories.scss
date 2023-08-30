@@ -1,5 +1,9 @@
 .wrapper {
   padding: 72px 10px;
+
+  @media (max-width: 860px) {
+    padding: 40px 10px;
+  }
 }
 
 .app__container {

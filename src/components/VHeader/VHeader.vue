@@ -5,10 +5,12 @@
         <SvgIcon name="logo" width="48px" height="48px" />
         <span class="logo-text">CLICON</span>
       </div>
-      <search-input
-        :model-value="searchValue"
-        @update:model-value="setSearchValue"
-      />
+      <div class="search">
+        <search-input
+          :model-value="searchValue"
+          @update:model-value="setSearchValue"
+        />
+      </div>
       <ul class="navigation-icon__list">
         <li>
           <SvgIcon name="basket_products" width="32px" height="32px" />

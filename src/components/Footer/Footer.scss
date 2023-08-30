@@ -11,6 +11,10 @@
   @media (max-width: 1080px) {
     flex-wrap: wrap;
   }
+
+  @media (max-width: 860px) {
+    padding: 40px 10px;
+  }
 }
 
 .logo__block {

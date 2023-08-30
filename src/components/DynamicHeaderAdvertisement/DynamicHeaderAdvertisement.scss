@@ -8,6 +8,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 860px) {
+    flex-direction: column;
+  }
 }
 
 .widget__logo {
@@ -53,5 +57,9 @@
       font-weight: 600;
       line-height: 28px;
     }
+  }
+
+  @media (max-width: 860px) {
+    margin: 15px 0;
   }
 }

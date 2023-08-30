@@ -2,6 +2,10 @@
   padding: 72px 10px;
 
   background-color: $gray_50;
+
+  @media (max-width: 860px) {
+    padding: 40px 10px;
+  }
 }
 
 .title {

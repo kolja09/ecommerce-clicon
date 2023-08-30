@@ -25,7 +25,9 @@
     <p class="text-blog">
       {{ blog.description }}
     </p>
-    <navigate-button>Read more</navigate-button>
+    <div>
+      <navigate-button>Read more</navigate-button>
+    </div>
   </div>
 </template>
 
