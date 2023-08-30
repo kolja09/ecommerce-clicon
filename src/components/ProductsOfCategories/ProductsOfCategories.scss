@@ -1,0 +1,57 @@
+.wrapper {
+  padding: 72px 10px;
+}
+
+.app__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  gap: 24px 24px;
+}
+
+.categorie__block {
+  width: 312px;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: $gray_900;
+}
+
+.product-card {
+  width: 312px;
+  border-radius: 3px;
+  border: 1px solid $gray_100;
+  padding: 12px;
+
+  font-weight: 400;
+
+  margin-top: 16px;
+
+  display: flex;
+  align-items: center;
+
+  cursor: pointer;
+
+  transition: box-shadow 0.3s;
+
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  img {
+    margin-right: 12px;
+  }
+
+  p {
+    margin-bottom: 8px;
+  }
+
+  span {
+    color: $blue_500;
+    font-weight: 600;
+  }
+}

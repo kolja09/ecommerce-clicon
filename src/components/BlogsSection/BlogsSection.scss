@@ -1,0 +1,18 @@
+.blog-section__wrapper {
+  padding: 72px 10px;
+
+  background-color: $gray_50;
+}
+
+.title {
+  text-align: center;
+
+  margin-bottom: 40px;
+}
+
+.blogs__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px 24px;
+}

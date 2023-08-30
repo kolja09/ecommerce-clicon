@@ -1,0 +1,47 @@
+.app__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__wrapper {
+  background-color: $blue_700;
+
+  padding: 20px 10px;
+}
+
+.logo_wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.logo-text {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: -0.64px;
+
+  color: $white;
+
+  margin-left: 8px;
+}
+
+.navigation-icon__list {
+  list-style: none;
+
+  display: flex;
+  align-items: center;
+
+  li {
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+      transition: 0.3s;
+    }
+  }
+}

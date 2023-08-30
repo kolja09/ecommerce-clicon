@@ -1,0 +1,31 @@
+.search-input__wrapper {
+  position: relative;
+  max-width: 648px;
+  width: 100%;
+  margin: 0 20px;
+}
+
+.stylized__input {
+  background: $white;
+  border: none;
+  box-shadow: 0px 8px 32px 0px rgba(0, 0, 0, 0.08);
+  font-size: 17px;
+  width: 100%;
+
+  padding: 14px 45px 14px 20px;
+  border-radius: 2px;
+
+  &::placeholder {
+    display: flex;
+    align-items: center;
+    color: $gray_500;
+    font-size: 14px;
+  }
+}
+
+.search-icon {
+  position: absolute;
+  top: 14px;
+  right: 20px;
+  pointer-events: none;
+}

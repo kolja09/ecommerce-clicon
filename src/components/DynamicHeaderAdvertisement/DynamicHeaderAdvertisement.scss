@@ -1,0 +1,57 @@
+.wrapper {
+  background-color: $gray_900;
+
+  padding: 16px;
+}
+
+.app__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.widget__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  p {
+    color: $white;
+    font-size: 24px;
+    font-weight: 600;
+  }
+}
+
+.bg__text {
+  background-color: $yellow-300;
+
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transform: rotate(-3deg);
+
+  padding: 6px 10px;
+
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+}
+
+.promotion__text {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: $white;
+
+  p {
+    &:nth-child(2) {
+      color: $yellow-500;
+      font-size: 40px;
+      font-weight: 600;
+      line-height: 48px;
+    }
+    &:nth-child(3) {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 28px;
+    }
+  }
+}
