@@ -13,6 +13,12 @@ import "@/assets/icons/youtube.svg";
 import "@/assets/icons/author.svg";
 import "@/assets/icons/date.svg";
 import "@/assets/icons/comment.svg";
+import "@/assets/icons/creditCard.svg";
+import "@/assets/icons/headPhones.svg";
+import "@/assets/icons/packege.svg";
+import "@/assets/icons/trophy.svg";
+import "@/assets/icons/arrowLeft.svg";
+import "@/assets/icons/arrowRight.svg";
 
 import "@/assets/companiesIcons/google.svg";
 import "@/assets/companiesIcons/amazon.svg";
