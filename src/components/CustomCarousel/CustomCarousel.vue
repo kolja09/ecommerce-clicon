@@ -19,20 +19,10 @@
         </div>
       </div>
       <div class="custom-arrows">
-        <button
-          :disabled="isFirstSlide"
-          class="arrow prev"
-          :class="{ disabled: isFirstSlide }"
-          @click.stop="prevSlide"
-        >
+        <button class="arrow prev" @click.stop="prevSlide">
           <SvgIcon name="arrowLeft" width="24px" height="24px" />
         </button>
-        <button
-          :disabled="isLastSlide"
-          :class="{ disabled: isLastSlide }"
-          class="arrow next"
-          @click.stop="nextSlide"
-        >
+        <button class="arrow next" @click.stop="nextSlide">
           <SvgIcon name="arrowRight" width="24px" height="24px" />
         </button>
       </div>
@@ -54,59 +44,45 @@ export default {
       ],
       activeIndex: 0,
       numVisibleElements: 0,
-      isAnimating: false,
-      isFirstSlide: true,
-      isLastSlide: false,
     };
   },
   computed: {
     visibleCategories() {
-      return this.categoriesData.slice(
-        this.activeIndex,
-        this.activeIndex + this.numVisibleElements
-      );
+      const result = [];
+      const totalCategories = this.categoriesData.length;
+
+      for (let i = 0; i < this.numVisibleElements; i++) {
+        let index = this.activeIndex + i;
+
+        if (index >= totalCategories) {
+          index -= totalCategories;
+        }
+
+        result.push(this.categoriesData[index]);
+      }
+
+      return result;
     },
   },
   methods: {
     prevSlide() {
-      this.isAnimating = true;
-      const newIndex = this.activeIndex - this.numVisibleElements;
-      this.activeIndex = Math.max(newIndex, 0);
-      setTimeout(() => {
-        this.isAnimating = false;
-      }, 300);
-
-      this.isFirstSlide = this.activeIndex === 0;
-      this.isLastSlide = false;
+      this.activeIndex--;
+      if (this.activeIndex < 0) {
+        this.activeIndex = this.categoriesData.length - 1;
+      }
     },
     nextSlide() {
-      this.isAnimating = true;
-      const newIndex = this.activeIndex + this.numVisibleElements;
-      this.activeIndex = Math.min(
-        newIndex,
-        this.categoriesData.length - this.numVisibleElements
-      );
-      setTimeout(() => {
-        this.isAnimating = false;
-      }, 300);
-
-      this.isFirstSlide = false;
-      this.isLastSlide =
-        this.activeIndex >=
-        this.categoriesData.length - this.numVisibleElements;
+      this.activeIndex++;
+      if (this.activeIndex >= this.categoriesData.length) {
+        this.activeIndex = 0;
+      }
     },
-
     updateVisibleElements() {
       const width = window.innerWidth;
       this.numVisibleElements = Math.min(
         width <= 1270 ? (width <= 1060 ? (width <= 660 ? 2 : 3) : 5) : 6,
         this.categoriesData.length
       );
-
-      this.isFirstSlide = this.activeIndex === 0;
-      this.isLastSlide =
-        this.activeIndex >=
-        this.categoriesData.length - this.numVisibleElements;
     },
   },
   mounted() {
