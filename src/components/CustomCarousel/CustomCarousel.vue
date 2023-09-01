@@ -15,7 +15,7 @@
             :src="require(`@/assets/categoriesPhoto/${card?.photo}.png`)"
             alt="categorie image"
           />
-          <h1>{{ card.name }}</h1>
+          <h1>{{ card.title }}</h1>
         </div>
       </div>
       <div class="custom-arrows">
@@ -63,7 +63,6 @@ export default {
       for (const element of lastElements) {
         this.categoriesData.unshift(element);
       }
-      console.log(this.categoriesData, "thisCateogriesDaat");
     },
     nextSlide() {
       const firstElements = this.categoriesData.splice(
