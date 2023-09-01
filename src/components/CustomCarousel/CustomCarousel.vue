@@ -12,10 +12,10 @@
           class="card__block"
         >
           <img
-            :src="require(`@/assets/categoriesPhoto/${card.photo}.png`)"
+            :src="require(`@/assets/categoriesPhoto/${card?.photo}.png`)"
             alt="categorie image"
           />
-          <h1>{{ card.title }}</h1>
+          <h1>{{ card.name }}</h1>
         </div>
       </div>
       <div class="custom-arrows">
@@ -41,40 +41,37 @@ export default {
         { title: "Accessories", photo: "accessories", id: 4 },
         { title: "Camera & Photo", photo: "camera", id: 5 },
         { title: "TV & Homes", photo: "tv", id: 6 },
+        { title: "Mobile Accessories", photo: "mobile", id: 7 },
       ],
       activeIndex: 0,
-      numVisibleElements: 0,
+      numVisibleElements: 6,
     };
   },
   computed: {
     visibleCategories() {
-      const result = [];
-      const totalCategories = this.categoriesData.length;
-
-      for (let i = 0; i < this.numVisibleElements; i++) {
-        let index = this.activeIndex + i;
-
-        if (index >= totalCategories) {
-          index -= totalCategories;
-        }
-
-        result.push(this.categoriesData[index]);
-      }
-
-      return result;
+      return this.categoriesData.slice(0, this.numVisibleElements);
     },
   },
   methods: {
     prevSlide() {
-      this.activeIndex--;
-      if (this.activeIndex < 0) {
-        this.activeIndex = this.categoriesData.length - 1;
+      const lastElements = this.categoriesData
+        .splice(
+          this.categoriesData.length - this.numVisibleElements,
+          this.categoriesData.length
+        )
+        .reverse();
+      for (const element of lastElements) {
+        this.categoriesData.unshift(element);
       }
+      console.log(this.categoriesData, "thisCateogriesDaat");
     },
     nextSlide() {
-      this.activeIndex++;
-      if (this.activeIndex >= this.categoriesData.length) {
-        this.activeIndex = 0;
+      const firstElements = this.categoriesData.splice(
+        0,
+        this.numVisibleElements
+      );
+      for (const element of firstElements) {
+        this.categoriesData.push(element);
       }
     },
     updateVisibleElements() {
