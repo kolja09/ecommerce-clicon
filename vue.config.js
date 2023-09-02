@@ -1,6 +1,7 @@
+const { defineConfig } = require("@vue/cli-service");
 const SpriteLoaderPlugin = require("svg-sprite-loader/plugin");
 
-module.exports = {
+module.exports = defineConfig({
   transpileDependencies: true,
   runtimeCompiler: true,
   css: {
@@ -26,4 +27,4 @@ module.exports = {
       })
       .end();
   },
-};
+});

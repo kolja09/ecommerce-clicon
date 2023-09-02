@@ -19,6 +19,7 @@ import "@/assets/icons/packege.svg";
 import "@/assets/icons/trophy.svg";
 import "@/assets/icons/arrowLeft.svg";
 import "@/assets/icons/arrowRight.svg";
+import "@/assets/icons/close.svg";
 
 import "@/assets/companiesIcons/google.svg";
 import "@/assets/companiesIcons/amazon.svg";

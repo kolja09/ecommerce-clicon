@@ -1,4 +1,5 @@
 .wrapper {
+  position: relative;
   background-color: $gray_900;
 
   padding: 16px;
@@ -62,4 +63,23 @@
   @media (max-width: 860px) {
     margin: 15px 0;
   }
+}
+
+.close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none; 
+
+  top: 24px;
+  right: 24px;
+
+  position: absolute;
+
+  padding: 8px;
+  border-radius: 2px;
+  background-color: $gray_800;
+
+  cursor: pointer;
 }
