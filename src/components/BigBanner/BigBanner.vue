@@ -2,7 +2,7 @@
   <div class="wrapper">
     <div class="app__container">
       <div class="content">
-        <div class="tag">SAVE UP TO $200.00</div>
+        <v-tag :themeTag="'blue'">SAVE UP TO $200.00</v-tag>
         <h1 class="title">Macbook Pro</h1>
         <p class="text">
           Apple M1 Max Chip. 32GB Unified Memory, 1TB SSD Storage

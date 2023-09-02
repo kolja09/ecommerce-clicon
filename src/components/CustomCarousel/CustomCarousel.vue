@@ -1,11 +1,8 @@
 <template>
   <div class="wrapper">
+    <h1 class="title-section">Shop with Categorys</h1>
     <div class="app__container">
-      <div
-        class="slider__wrapper"
-        :class="{ animate: isAnimating }"
-        ref="sliderWrapper"
-      >
+      <div class="slider__wrapper" ref="sliderWrapper">
         <div
           v-for="card in visibleCategories"
           :key="card.id"
@@ -18,7 +15,10 @@
           <h1>{{ card.title }}</h1>
         </div>
       </div>
-      <div class="custom-arrows">
+      <div
+        v-show="categoriesData.length > numVisibleElements"
+        class="custom-arrows"
+      >
         <button class="arrow prev" @click.stop="prevSlide">
           <SvgIcon name="arrowLeft" width="24px" height="24px" />
         </button>
@@ -41,9 +41,7 @@ export default {
         { title: "Accessories", photo: "accessories", id: 4 },
         { title: "Camera & Photo", photo: "camera", id: 5 },
         { title: "TV & Homes", photo: "tv", id: 6 },
-        { title: "Mobile Accessories", photo: "mobile", id: 7 },
       ],
-      activeIndex: 0,
       numVisibleElements: 6,
     };
   },
