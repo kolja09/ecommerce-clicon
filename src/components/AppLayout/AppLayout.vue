@@ -2,6 +2,7 @@
   <dynamic-header-advertisement />
   <header-contact-us />
   <v-header />
+  <navigation-bar />
   <router-view />
   <newsletter />
   <v-footer />

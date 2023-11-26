@@ -1,8 +1,6 @@
-.wrapper {
-  padding: 24px 10px 0 10px;
-}
+.container {
+  margin-top: 24px;
 
-.app__container {
   border-radius: 6px;
   border: 1px solid $gray_100;
 
@@ -23,6 +21,8 @@
 .feature__block {
   position: relative;
   padding: 10px 35px;
+
+  stroke: #191c1f;
 
   width: 322px;
 

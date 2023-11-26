@@ -20,6 +20,16 @@ import "@/assets/icons/trophy.svg";
 import "@/assets/icons/arrowLeft.svg";
 import "@/assets/icons/arrowRight.svg";
 import "@/assets/icons/close.svg";
+import "@/assets/icons/location.svg";
+import "@/assets/icons/info.svg";
+import "@/assets/icons/arrowsCounterClockwise.svg";
+import "@/assets/icons/userOrangeColor.svg";
+import "@/assets/icons/stack.svg";
+import "@/assets/icons/notepad.svg";
+import "@/assets/icons/storePhont.svg";
+import "@/assets/icons/creditCardOrange.svg";
+import "@/assets/icons/lockOpen.svg";
+import "@/assets/icons/truck.svg";
 
 import "@/assets/companiesIcons/google.svg";
 import "@/assets/companiesIcons/amazon.svg";

@@ -1,9 +1,11 @@
 <template>
-  <div class="wrapper">
-    <div class="app__container">
-      <middle-banner :themeTag="'blue'" :bannerData="bannersData[0]" />
-      <middle-banner :themeTag="'yellow'" :theme="'black'" :bannerData="bannersData[1]" />
-    </div>
+  <div class="container">
+    <middle-banner :themeTag="'blue'" :bannerData="bannersData[0]" />
+    <middle-banner
+      :themeTag="'yellow'"
+      :theme="'black'"
+      :bannerData="bannersData[1]"
+    />
   </div>
 </template>
 

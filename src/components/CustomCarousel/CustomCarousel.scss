@@ -1,11 +1,12 @@
-.wrapper {
-  padding: 72px 25px 0 25px;
+.cateogry__wrapper {
+  padding: 72px 0px 0 0px;
 
-  @media (max-width: 860px) {
-    padding: 40px 25px 0 25px;
+  @media (max-width: 1400px) {
+    padding: 40px 15px 0 15px;
   }
 }
-.app__container {
+
+.container {
   position: relative;
 }
 
@@ -22,9 +23,7 @@
 .title-section {
   text-align: center;
 
-  font-size: 32px;
-  font-weight: 600;
-  line-height: 40px;
+  @include headline-text;
 }
 
 .card__block {

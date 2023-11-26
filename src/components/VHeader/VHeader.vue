@@ -1,7 +1,7 @@
 <template>
   <div class="header__wrapper">
     <div class="app__container">
-      <div class="logo_wrapper">
+      <div @click="goToHomePage" class="logo_wrapper">
         <SvgIcon name="logo" width="48px" height="48px" />
         <span class="logo-text">CLICON</span>
       </div>
@@ -36,6 +36,9 @@ export default {
   methods: {
     setSearchValue(value) {
       this.searchValue = value;
+    },
+    goToHomePage() {
+      this.$router.push({ name: "Home" });
     },
   },
 };

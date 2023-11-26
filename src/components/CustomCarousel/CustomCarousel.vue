@@ -1,7 +1,7 @@
 <template>
-  <div class="wrapper">
+  <div class="cateogry__wrapper">
     <h1 class="title-section">Shop with Categorys</h1>
-    <div class="app__container">
+    <div class="container">
       <div class="slider__wrapper" ref="sliderWrapper">
         <div
           v-for="card in visibleCategories"

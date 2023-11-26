@@ -1,12 +1,13 @@
 <template>
   <button
     class="styles__button"
-    :class="{ button__yellow: color === 'yellow'}"
+    :class="{ button__yellow: color === 'yellow' }"
   >
     <span class="text">
       <slot></slot>
     </span>
     <SvgIcon
+      v-show="isIcon"
       class="active"
       name="navigate_arrow"
       width="22px"
@@ -21,6 +22,11 @@ export default {
   props: {
     color: {
       type: String,
+      required: false,
+    },
+    isIcon: {
+      type: Boolean,
+      default: true,
       required: false,
     },
   },

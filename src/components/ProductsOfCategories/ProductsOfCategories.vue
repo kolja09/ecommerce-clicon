@@ -1,24 +1,22 @@
 <template>
-  <div class="wrapper">
-    <div class="app__container">
+  <div class="container">
+    <div
+      class="categorie__block"
+      v-for="(categorie, index) in productsOdCategoriesData"
+      :key="index"
+    >
+      <h1 class="title">{{ categorie.title }}</h1>
       <div
-        class="categorie__block"
-        v-for="(categorie, index) in productsOdCategoriesData"
-        :key="index"
+        v-for="product in categorie.products"
+        :key="product.id"
+        class="product-card"
       >
-        <h1 class="title">{{ categorie.title }}</h1>
-        <div
-          v-for="product in categorie.products"
-          :key="product.id"
-          class="product-card"
-        >
-          <img
-            :src="require(`@/assets/productsOfCategories/${product.photo}.png`)"
-          />
-          <div>
-            <p>{{ product.title }}</p>
-            <span>${{ product.price }}</span>
-          </div>
+        <img
+          :src="require(`@/assets/productsOfCategories/${product.photo}.png`)"
+        />
+        <div>
+          <p>{{ product.title }}</p>
+          <span>${{ product.price }}</span>
         </div>
       </div>
     </div>

@@ -1,12 +1,14 @@
 <template>
-  <div class="home">
-    <features-site />
-    <custom-carousel />
-    <medium-banner-section />
-    <big-banner />
-    <products-of-categories />
-    <blogs-section />
+  <div class="wrapper">
+    <div class="app__container">
+      <features-site />
+      <custom-carousel />
+      <medium-banner-section />
+      <big-banner />
+      <products-of-categories />
+    </div>
   </div>
+  <blogs-section />
 </template>
 
 <script lang="ts">
@@ -29,3 +31,6 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+</style>>

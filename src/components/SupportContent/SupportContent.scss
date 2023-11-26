@@ -1,0 +1,48 @@
+.container {
+  padding: 72px 0;
+}
+
+.title {
+  @include headline-text;
+
+  text-align: center;
+}
+
+.navigation__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+
+  margin-top: 40px;
+}
+
+.navigation_block {
+  display: flex;
+  align-items: center;
+
+  width: 312px;
+
+  border-radius: 4px;
+  border: 2px solid $orange-100;
+
+  padding: 24px;
+
+  p {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+
+    margin-left: 16px;
+  }
+
+  transition: all 0.3s;
+
+  &:hover {
+    box-shadow: 0px 8px 40px 0px rgba(250, 130, 50, 0.12);
+    border: 2px solid $orange-500;
+
+    cursor: pointer;
+
+    transition: all 0.3s;
+  }
+}

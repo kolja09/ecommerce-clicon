@@ -1,0 +1,60 @@
+.container {
+  background: url("@/assets/images/supportBgImage.png") no-repeat center
+    center/cover;
+  box-shadow: 0px -1px 0px 0px #e4e7e9 inset;
+  height: 332px;
+  padding: 72px 0;
+
+  h1 {
+    @include headline-text;
+
+    margin-top: 16px;
+    margin-bottom: 24px;
+  }
+}
+
+.input__wrapper {
+  position: relative;
+  border-radius: 4px;
+  border: 1px solid $gray_100;
+  background-color: $white;
+
+  width: 536px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+
+  .styles-input {
+    border: none;
+    padding: 12px 10px 12px 36px;
+    width: 303px;
+    margin-right: 16px;
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+
+    &::placeholder {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    @media (max-width: 560px) {
+      width: 100%;
+    }
+  }
+
+  .image__block {
+    position: absolute;
+    top: 24px;
+
+    stroke: #fa8232;
+  }
+}

@@ -14,9 +14,7 @@
 }
 
 .title {
-  font-size: 32px;
-  font-weight: 600;
-  line-height: 40px;
+  @include headline-text;
 
   color: $white;
 }
